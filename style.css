@@ -1,0 +1,309 @@
+/* Reset basic browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #222;
+  padding: 20px;
+}
+
+body.modal-open {
+  overflow:hidden;
+}
+
+/* Main resume container */
+main,
+header,
+footer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 18px;
+}
+
+/* Navigation links */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #2563eb;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Sections */
+section {
+  background-color: #ffffff;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: #2563eb;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 6px;
+}
+
+/* Articles */
+article {
+  margin-bottom: 18px;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+article h3 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+article p {
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+/* Lists */
+ul {
+  padding-left: 22px;
+  margin-top: 8px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Skills list */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+#skills li {
+  background-color: #e0ecff;
+  color: #1e40af;
+  padding: 8px 12px;
+  border-radius: 18px;
+  font-size: 0.95rem;
+}
+
+/* Project links */
+#projects a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#projects a:hover {
+  text-decoration: underline;
+}
+
+/* Education details button */
+.details-btn {
+  margin-top: 5px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.details-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Floating modal window */
+.modal {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+  /* Center the modal */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Dark background behind modal */
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: bluer(7px);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #ffffff;
+  padding: 25px;
+  position: relative;
+}
+
+.modal-content h3 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+
+/* Certificate limk stuff */
+.image-modal {
+  border: none;
+  padding: 0;
+  background: transparent;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.image-modal-content img {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: #ffffff;
+  color: #111827;
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.certificate-btn {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #2563eb;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+}
+
+.certificate-btn:hover {
+  background-color: #1d4ed8;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 25px;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  header {
+    padding: 30px 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    width: 100%;
+    max-width: 250px;
+  }
+}
