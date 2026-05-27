@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name | Resume</title>
+    <title>Minh Hung Pham | Resume</title>
     <link rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="script.js" async></script>
@@ -49,7 +49,7 @@
         <article>
           <h3>Bachelor of Computer Science</h3>
           <p><strong>University of Technology Graz</strong> | 2024 - present</p>
-          <button class="details-btn">View Education Details</button>
+          <button class="details-btn" name="tu-graz">View Education Details</button>
         </article>
 
         <article>
@@ -58,29 +58,16 @@
           <button class="details-btn" name="vguh">View Education Details</button>
         </article>
 
+        <article>
+          <h3>High School</h3>
+          <p><strong>Luong The Vinh Private High School</strong> | 2019 - 2022</p>
+          <button class="details-btn" name="high-school">View Education Details</button>
+        </article>
+
         <dialog id="education-modal" class="modal">
           <div class="modal-content">
             <button class="close-btn">&times;</button>
-
-            <h3>Education Details</h3>
-            <p><strong>Instituion:</strong>Vorstudientlehrgang der Grazer Universitäten und Hochschulen</p>
-            <p><strong>Graduation Year:</strong> 2024</p>
-            <p><strong>Final results:</strong></p>
-            <ul>
-              <li>German: <b>3</b> <a href="#" class="certificate-btn" data-image="images/vguh_german.jpeg">Certificate</a></li>
-              <li>Chemistry: <b>3</b> <a href="#" class="certificate-btn" data-image="images/vguh_chemistry.jpeg">Certificate</a></li>
-              <li>Mathematics: <b>2</b> <a href="#" class="certificate-btn" data-image="images/vguh_mathematics.jpeg">Certificate</a></li>
-              <li>Physics: <b>2</b> <a href="#" class="certificate-btn" data-image="images/vguh_physics.jpeg">Certificate</a></li>
-              <li>English: <b>1</b> <a href="#" class="certificate-btn" data-image="images/vguh_english.jpeg">Certificate</a></li>
-            </ul>
-
-            <dialog id="certificate-modal" class="image-modal">
-              <div class="image-modal-content">
-                <button class="close-btn" id="close-certificate-modal">&times;</button>
-
-                <img id="certificate-image" src="" alt="Certificate preview" />
-              </div>
-            </dialog>
+            <div id="education-modal-body"></div>
           </div>
         </dialog>
 
@@ -95,6 +82,15 @@
             <li>Implemented gRPC-based middleware and backend communication</li>
             <li>Implemeneted an endpoint that finds the shortest path using Dijkstra's algorithm</li>
             <li>Parse OSM file using Sax Parser to construct roads and amenities for the map</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="residence-status">
+        <h2>Residence status</h2>
+        <article>
+          <ul>
+            <li>Student</li>
           </ul>
         </article>
       </section>
